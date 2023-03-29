@@ -35,7 +35,7 @@
 有三种图片显示模式: wide, big, inline. 当你编写 mark 文件的时候可以指定 wide 或 big 或 inline 到你的图片 alt 属性中, 比如这样:
 
 ```markdown
-![alt content|wide](a.png)
+![alt content|wide](<a href="" class=""></a>png)
 ```
 
 <strong>分割符号是`|`,默认的模式为 `big`.</strong>

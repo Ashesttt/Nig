@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'ipad玩Linux没有esc怎么办'
-pubDate: 2023-03-29
+pubDate: 2044-03-29
 description: 'ipad玩Linux没有esc怎么办'
 author: '黄纪皓'
 cover:

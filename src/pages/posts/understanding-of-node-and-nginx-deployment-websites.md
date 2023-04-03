@@ -1,14 +1,14 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'node和nginx部署网站的初步认识'
-pubDate: 2046-07-01
+pubDate: 2023-03-29
 description: 'node和nginx部署网站的初步认识'
 author: 'hjh'
 cover:
-    url: 'https://www.apple.com.cn/newsroom/images/values/environment/Apple-Earth-Day-India-mangrove-Alibaug-canoe_Full-Bleed-Image.jpg.large_2x.jpg'
-    square: 'https://www.apple.com.cn/newsroom/images/values/environment/Apple-Earth-Day-India-mangrove-Alibaug-canoe_Full-Bleed-Image.jpg.large_2x.jpg'
+    url: 'https://cdnjson.com/images/2023/04/02/v2-ac85dfe7ff45d09896dc6078dc51971f_r.jpg'
+    square: 'https://cdnjson.com/images/2023/04/02/v2-ac85dfe7ff45d09896dc6078dc51971f_r.jpg'
     alt: 'cover'
-tags: ["node","保育", "新闻稿"]
+tags: ["Node.js", "Nginx", "Linux"]  
 theme: 'dark'   
 featured: true
 ---

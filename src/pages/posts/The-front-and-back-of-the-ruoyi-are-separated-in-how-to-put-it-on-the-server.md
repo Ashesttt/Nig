@@ -1,14 +1,14 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: '前后端分离的ruoyi在如何放在服务器上'
-pubDate: 2043-03-29
+pubDate: 2023-03-29
 description: '前后端分离的ruoyi在如何放在服务器上'
-author: '黄纪皓'
+author: 'hjh'
 cover:
-    url: 'https://cdn2.unrealengine.com/vr-week-2023-header-4-1920x1080-376e6c48383f.jpg?resize=1&w=1920'
-    square: 'https://cdn2.unrealengine.com/vr-week-2023-header-4-1920x1080-376e6c48383f.jpg?resize=1&w=1920'
+    url: 'https://cdnjson.com/images/2023/04/02/wallhaven-57rmj5_2560x1440.png'
+    square: 'https://cdnjson.com/images/2023/04/02/wallhaven-57rmj5_2560x1440.png'
     alt: 'cover'
-tags: ["功能", "动画", "广播与实况", "虚幻引擎"]
+tags: ["前后端分离", "若依", "服务器", "Node.js", "Nginx", "Maven", "JDK", "MySQL", "Redis"]
 theme: 'light'
 featured: true
 ---
@@ -135,16 +135,16 @@ cp -r /nigproject/ruoyi/RuoYi-Vue-nigge/RuoYi-Vue-master/ruoyi-ui/dist/* .
 它们分别在本机的：
 
 ```jsx
-D:\RuoYi-Vue-nigge\RuoYi-Vue-master\ruoyi-admin\src\main\resources\application.yml
+D:/RuoYi-Vue-nigge/RuoYi-Vue-master/ruoyi-admin/src/main/resources/application.yml
 
-D:\RuoYi-Vue-nigge\RuoYi-Vue-master\ruoyi-admin\src\main\resources\application-druid.yml
+D:/RuoYi-Vue-nigge/RuoYi-Vue-master/ruoyi-admin/src/main/resources/application-druid.yml
 ```
 
 ### application.yml主要配置是：
 
 ```jsx
 # 项目相关配置
-# 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
+# 文件路径 示例( Windows配置D:/ruoyi/uploadPath Linux配置 /home/ruoyi/uploadPath )
   profile: /nigproject/ruoyi/RuoYi-Vue-nigge
 
 # redis 配置
@@ -202,7 +202,7 @@ server {
 它在本机的：
 
 ```jsx
-D:\RuoYi-Vue-nigge\RuoYi-Vue-master\ruoyi-ui\vue.config.js
+D:/RuoYi-Vue-nigge/RuoYi-Vue-master/ruoyi-ui/vue.config.js
 ```
 
 ### vue.config.js主要配置是：

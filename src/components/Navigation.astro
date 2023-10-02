@@ -1,5 +1,6 @@
 ---
 import { SITE_TITLE } from "../consts";
+ import { searchPosts } from '../search';
 ---
 
 
@@ -18,6 +19,27 @@ import { SITE_TITLE } from "../consts";
           <div class="nav-item-wrapper">
             <a href="/rss.xml" class="nav-item-content" target="_blank">RSS</a>
           </div>
+
+    <form>
+      <input type="text" name="search" placeholder="Search...">
+      <button type="submit">Search</button>
+    </form>
+
+<script>
+
+  let keyword = '';
+
+  function handleSearch() {
+    const searchResults = searchPosts(keyword);
+    displaySearchResults(searchResults);
+  }
+
+  function displaySearchResults(results) {
+    // 显示搜索结果
+  }
+</script>
+
+
         </div>
       </div>
     </div>

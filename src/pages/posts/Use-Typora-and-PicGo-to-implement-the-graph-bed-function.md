@@ -5,8 +5,8 @@ pubDate: 2023-04-03
 description: '用Typora、PicGo等工具实现图床功能'
 author: 'hjh'
 cover:
-    url: 'https://cdnjson.com/images/2023/04/02/v2-75c6ff38f146de7005e2d94342a42eb1_r.jpg'
-    square: 'https://cdnjson.com/images/2023/04/02/v2-75c6ff38f146de7005e2d94342a42eb1_r.jpg'
+    url: 'https://cdnjson.com/images/2023/04/03/v2-9efeb54eebe6adfc454e8e4b97118788_r.jpg'
+    square: 'https://cdnjson.com/images/2023/04/03/v2-9efeb54eebe6adfc454e8e4b97118788_r.jpgg'
     alt: 'cover'
 tags: ["Typora","PicGo","图床","cdnjson.com","SM.MS","Markdown"]
 theme: 'light'
@@ -128,7 +128,6 @@ featured: true
 
 5. 再点击一下“验证图片上传选项”，验证一下。（要是多次验证可能会失败，可能是因为SM.MS上已经有很多那个用来验证的图片了，再上传就报错了）
 
-   ​
 
 ## 总结
 

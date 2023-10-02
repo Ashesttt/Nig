@@ -15,9 +15,11 @@ featured: true
 
 # 前后端分离的ruoyi在如何放在服务器上
 
-# 前后端分离的ruoyi在如何放在服务器上
+
 
 本文将介绍如何将前后端分离的ruoyi项目部署在服务器上。
+
+
 
 ## 准备工作
 
@@ -28,13 +30,17 @@ featured: true
 - 确保服务器已安装Maven环境，可以通过运行`mvn -v`命令来检查。
 - [node.](http://node.is)js 最好v16 不然出现各种问题
 
+
+
 # 后端：
 
-1.用idea 修改配置：mysql、redis
+1.**用idea 修改配置：mysql、redis**
 
-2.在服务器的mysql 导入sql
+2.**在服务器的mysql 导入sql；**
 
-首先创建和使用 数据库
+
+
+- 首先创建和使用 数据库
 
 ```bash
 create database'ruo-vue';
@@ -42,7 +48,9 @@ create database'ruo-vue';
 use ruo-vue;
 ```
 
-然后 导入sql
+
+
+- 然后 导入sql
 
 ```bash
 source /nigproject/ruoyi/RuoYi-Vue-nigge/RuoYi-Vue-master/sql/quartz.sql
@@ -50,89 +58,105 @@ source /nigproject/ruoyi/RuoYi-Vue-nigge/RuoYi-Vue-master/sql/quartz.sql
 source /nigproject/ruoyi/RuoYi-Vue-nigge/RuoYi-Vue-master/sql/ry_20220822.sql
 ```
 
-收工！
+- 收工！
 
-3.在idea中 然后找到源代码的bin/package.bat 用maven 运行package 打包
 
-打包完会在 以下地址 生成一个jar包 
+
+3.**在idea中 然后找到源代码的bin/package.bat 用maven 运行package 打包**
+
+
+
+- 打包完会在 以下地址 生成一个jar包 ：
 
 ```bash
 D:\RuoYi-Vue-nigge\RuoYi-Vue-master\ruoyi-admin\target\ruoyi-admin.jar
 ```
 
-然后用xshell 复制到服务器中的以下地址
+- 然后用xshell 复制到服务器中的以下地址：
 
 ```bash
 cd /nigproject/ruoyi/RuoYi-Vue-nigge/RuoYi-Vue-master
 ```
 
-然后运行
+- 然后运行
 
 ```bash
 java -jar ruoyi-admin.jar
 ```
 
-后端就运行起来了
+- 后端就运行起来了
 
-![FullSizeRender.jpeg](%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%9A%84ruoyi%E5%9C%A8%E5%A6%82%E4%BD%95%E6%94%BE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%20bfa0aa55867d4469b352b3bcfbe227da/FullSizeRender.jpeg)
+![后端就运行起来了](https://s2.loli.net/2023/04/03/yCTBzM5P6emhIA9.jpg)
 
-4.启动 redis
+
+
+4.**启动 redis**
 
 ```bash
 redis-server
 ```
 
-![FullSizeRender.jpeg](%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%9A%84ruoyi%E5%9C%A8%E5%A6%82%E4%BD%95%E6%94%BE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%20bfa0aa55867d4469b352b3bcfbe227da/FullSizeRender%201.jpeg)
+![启动 redis](https://s2.loli.net/2023/04/03/GNoh3xC4euYvPBT.jpg)
 
-检验redis 是否启动了
+
+
+- 检验redis 是否启动了
 
 ```bash
 redis-cli
 ```
 
-然后进入到redis的 客户端 再输入
+- 然后进入到redis的 客户端 再输入
 
 ```bash
 ping
 ```
 
-他就会返回 pong
+- 他就会返回 pong
 
-5.打包前端ruoyi-ui
+
+
+5.**打包前端ruoyi-ui**
 
 ```bash
 npm run build:prod
 ```
 
-然后就在该文件夹中 生成打包好的前端 dist 文件
+- 然后就在该文件夹中 生成打包好的前端 dist 文件
 
-![IMG_0514.jpeg](%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%9A%84ruoyi%E5%9C%A8%E5%A6%82%E4%BD%95%E6%94%BE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%20bfa0aa55867d4469b352b3bcfbe227da/IMG_0514.jpeg)
+![然后就在该文件夹中 生成打包好的前端 dist 文件](https://s2.loli.net/2023/04/03/sQOMvREHKyIFzVN.jpg)
 
-去到nginx 的前端文件夹
+
+
+- 去到nginx 的前端文件夹
 
 ```bash
 /usr/share/nginx/ruoyiui
 ```
 
-再复制dist里的文件复制到ruoyiui中
+- 再复制dist里的文件复制到ruoyiui中
 
 ```bash
 cp -r /nigproject/ruoyi/RuoYi-Vue-nigge/RuoYi-Vue-master/ruoyi-ui/dist/* .
 ```
 
-![IMG_0515.jpeg](%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%9A%84ruoyi%E5%9C%A8%E5%A6%82%E4%BD%95%E6%94%BE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%20bfa0aa55867d4469b352b3bcfbe227da/IMG_0515.jpeg)
+![复制dist里的文件复制到ruoyiui中](https://s2.loli.net/2023/04/03/wHLC46MGaDKe9Oy.jpg)
 
-6.最重要的配置
+
+
+6.**最重要的配置**
+
+
 
 ### 后端
 
 的两个配置文件：
 
-[application.yml](%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%9A%84ruoyi%E5%9C%A8%E5%A6%82%E4%BD%95%E6%94%BE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%20bfa0aa55867d4469b352b3bcfbe227da/application.yml)
+[application.yml](https://github.com/Ashesttt/RuoYi-Vue-nigge/blob/master/RuoYi-Vue-master/ruoyi-admin/src/main/resources/application.yml)
 
-[application-druid.yml](%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%9A%84ruoyi%E5%9C%A8%E5%A6%82%E4%BD%95%E6%94%BE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%20bfa0aa55867d4469b352b3bcfbe227da/application-druid.yml)
+[application-druid.yml](https://github.com/Ashesttt/RuoYi-Vue-nigge/blob/master/RuoYi-Vue-master/ruoyi-admin/src/main/resources/application-druid.yml)
 
-它们分别在本机的：
+- 它们分别在本机的：
 
 ```jsx
 D:/RuoYi-Vue-nigge/RuoYi-Vue-master/ruoyi-admin/src/main/resources/application.yml
@@ -165,9 +189,9 @@ D:/RuoYi-Vue-nigge/RuoYi-Vue-master/ruoyi-admin/src/main/resources/application-d
 
 ### Nginx
 
-[default.conf](%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%9A%84ruoyi%E5%9C%A8%E5%A6%82%E4%BD%95%E6%94%BE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%20bfa0aa55867d4469b352b3bcfbe227da/default.conf)
+[default.conf](https://github.com/Ashesttt/picture/blob/main/default.conf)
 
-它在服务器的
+- 它在服务器的
 
 ```jsx
 cat /etc/nginx/conf.d/default.conf
@@ -197,9 +221,9 @@ server {
 
 ### 前端
 
-[vue.config.js](%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%9A%84ruoyi%E5%9C%A8%E5%A6%82%E4%BD%95%E6%94%BE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%20bfa0aa55867d4469b352b3bcfbe227da/vue.config.txt)
+[vue.config.txt](https://github.com/Ashesttt/picture/blob/main/vue.config.txt)
 
-它在本机的：
+- 它在本机的：
 
 ```jsx
 D:/RuoYi-Vue-nigge/RuoYi-Vue-master/ruoyi-ui/vue.config.js
@@ -225,7 +249,7 @@ const port = process.env.port || process.env.npm_config_port || 4000 // 端口
         target: `http://localhost:8080`,
 ```
 
-7.访问
+7.**访问**
 
 [http://82.157.238.98:4000/](http://82.157.238.98:4000/)
 

@@ -31,7 +31,7 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
 
         {
           // tile-3up
-          allPosts.slice(5, 11).map((post) => {
+          allPosts.slice(5, 17).map((post) => {
             return (
               <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="3" />
             );
@@ -58,7 +58,7 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
         }
       </ul>
       <div class="view-archive-wrapper">
-        <a href="/archive" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">阅读历史文章</a>
+        <a href="/archive" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view <arch></arch>ive">阅读历史文章</a>
       </div>
     </div>
   </section>

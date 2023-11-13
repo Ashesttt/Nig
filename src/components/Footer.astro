@@ -1,7 +1,7 @@
 ---
-import { SITE_TITLE, SITE_EMAIL } from "../consts";
+import { SITE_TITLE, SITE_EMAIL } from "../consts.js";
 const { theme } = Astro.props;
-import { SITE_NAME } from "../consts";
+import { SITE_NAME } from "../consts.js";
 const date = new Date();
 const year = date.getFullYear();
 ---
@@ -43,5 +43,6 @@ const year = date.getFullYear();
           <a href="https://beian.miit.gov.cn/" target="_blank">冀ICP备2023008738号</a>
       </div>
     </div>
+   </div>
   </div>
 </div>

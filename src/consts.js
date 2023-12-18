@@ -1,4 +1,4 @@
-export const SITE_TITLE = `hjh's Blog`;
+export const SITE_TITLE = `hjh's 学习笔记`;
 export const SITE_DESCRIPTION = 'hjh的个人博客';
 export const SITE_EMAIL = '705626108@qq.com'
 export const SITE_NAME = 'jerryestt.top';
